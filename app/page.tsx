@@ -156,7 +156,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-8 sm:py-12 px-4">
+      <footer className="bg-[#01602a] text-white py-8 sm:py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center gap-6 sm:gap-8">
             {/* Logo */}
@@ -170,7 +170,7 @@ export default function Home() {
 
             {/* Copyright */}
             <div className="text-center">
-              <p className="text-xs sm:text-sm text-gray-400">
+              <p className="text-xs sm:text-sm text-white/80">
                 © 2026 Localiza. Todos os direitos reservados.
               </p>
             </div>
