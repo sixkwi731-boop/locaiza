@@ -27,10 +27,10 @@ export default function Home() {
       {/* Header com Logo */}
       <header className="bg-[#01602a] shadow-sm py-3 sm:py-4 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto flex items-center justify-center sm:justify-start">
-          <img 
-            src="/localiza-logo.svg" 
-            alt="Localiza" 
-            className="h-6 sm:h-8 md:h-10" 
+          <img
+            src="/localiza-logo.svg"
+            alt="Localiza"
+            className="h-6 sm:h-8 md:h-10"
           />
         </div>
       </header>
@@ -64,17 +64,19 @@ export default function Home() {
                     d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                   ></path>
                 </svg>
-                <span className="text-xs sm:text-sm font-semibold whitespace-nowrap">Em andamento</span>
+                <span className="text-xs sm:text-sm font-semibold whitespace-nowrap">
+                  Em andamento
+                </span>
               </div>
             </div>
           </div>
 
           {/* Carrossel de Banners */}
-          <div className="mb-6 sm:mb-8 relative rounded-lg sm:rounded-xl overflow-hidden -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-12">
+          <div className="mb-6 sm:mb-8 relative rounded-lg sm:rounded-xl overflow-hidden">
             <img
               src={banners[currentBanner]}
               alt={`Banner Localiza ${currentBanner + 1}`}
-              className="w-full h-auto object-cover min-h-[200px] sm:min-h-[250px] md:min-h-[300px]"
+              className="w-full h-auto object-contain bg-gradient-to-r from-green-50 to-blue-50"
             />
           </div>
 
@@ -108,7 +110,9 @@ export default function Home() {
                     d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"
                   />
                 </svg>
-                <span className="leading-tight">Baixar Arquivo de Acompanhamento</span>
+                <span className="leading-tight">
+                  Baixar Arquivo de Acompanhamento
+                </span>
               </a>
             </div>
 
