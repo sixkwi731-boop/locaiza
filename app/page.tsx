@@ -194,10 +194,32 @@ export default function Home() {
               />
             </div>
 
+            {/* Divisor */}
+            <div className="w-full max-w-3xl h-px bg-white/20"></div>
+
+            {/* Informações da Empresa */}
+            <div className="text-center space-y-3 sm:space-y-4 max-w-3xl">
+              <p className="text-xs sm:text-sm text-white/90 leading-relaxed">
+                <strong>Informações ao consumidor:</strong> Localiza Rent a Car S/A - CNPJ nº 16.670.085/0001-55
+              </p>
+              <p className="text-xs sm:text-sm text-white/90 leading-relaxed">
+                <strong>Sede:</strong> Avenida Bernardo Vasconcelos, n° 377 - Cachoeirinha - CEP: 31.150-000 - Belo Horizonte - MG
+              </p>
+              <p className="text-xs sm:text-sm text-white/90 leading-relaxed">
+                <strong>Central de Reservas e Assistência a Clientes:</strong>{" "}
+                <a href="tel:08009792020" className="hover:text-white transition-colors underline">
+                  0800 979 2020
+                </a>
+              </p>
+            </div>
+
+            {/* Divisor */}
+            <div className="w-full max-w-3xl h-px bg-white/20"></div>
+
             {/* Copyright */}
             <div className="text-center">
               <p className="text-xs sm:text-sm text-white/80">
-                © 2026 Localiza. Todos os direitos reservados.
+                © Localiza - Todos direitos reservados
               </p>
             </div>
           </div>
