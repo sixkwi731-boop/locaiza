@@ -200,14 +200,19 @@ export default function Home() {
             {/* Informações da Empresa */}
             <div className="text-center space-y-3 sm:space-y-4 max-w-3xl">
               <p className="text-xs sm:text-sm text-white/90 leading-relaxed">
-                <strong>Informações ao consumidor:</strong> Localiza Rent a Car S/A - CNPJ nº 16.670.085/0001-55
+                <strong>Informações ao consumidor:</strong> Localiza Rent a Car
+                S/A - CNPJ nº 16.670.085/0001-55
               </p>
               <p className="text-xs sm:text-sm text-white/90 leading-relaxed">
-                <strong>Sede:</strong> Avenida Bernardo Vasconcelos, n° 377 - Cachoeirinha - CEP: 31.150-000 - Belo Horizonte - MG
+                <strong>Sede:</strong> Avenida Bernardo Vasconcelos, n° 377 -
+                Cachoeirinha - CEP: 31.150-000 - Belo Horizonte - MG
               </p>
               <p className="text-xs sm:text-sm text-white/90 leading-relaxed">
                 <strong>Central de Reservas e Assistência a Clientes:</strong>{" "}
-                <a href="tel:08009792020" className="hover:text-white transition-colors underline">
+                <a
+                  href="tel:08009792020"
+                  className="hover:text-white transition-colors underline"
+                >
                   0800 979 2020
                 </a>
               </p>
