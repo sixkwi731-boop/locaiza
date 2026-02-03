@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const banners = [
@@ -13,13 +13,14 @@ export default function Home() {
 
   const [currentBanner, setCurrentBanner] = useState(0);
 
-  const nextBanner = () => {
-    setCurrentBanner((prev) => (prev + 1) % banners.length);
-  };
+  // Rotação automática do carrossel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBanner((prev) => (prev + 1) % banners.length);
+    }, 5000); // Muda a cada 5 segundos
 
-  const prevBanner = () => {
-    setCurrentBanner((prev) => (prev - 1 + banners.length) % banners.length);
-  };
+    return () => clearInterval(interval);
+  }, [banners.length]);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -69,69 +70,12 @@ export default function Home() {
           </div>
 
           {/* Carrossel de Banners */}
-          <div className="mb-6 sm:mb-8 relative rounded-lg sm:rounded-xl overflow-hidden group">
+          <div className="mb-6 sm:mb-8 relative rounded-lg sm:rounded-xl overflow-hidden -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-12">
             <img
               src={banners[currentBanner]}
               alt={`Banner Localiza ${currentBanner + 1}`}
-              className="w-full h-auto object-cover"
+              className="w-full h-auto object-cover min-h-[200px] sm:min-h-[250px] md:min-h-[300px]"
             />
-
-            {/* Botões de navegação */}
-            <button
-              onClick={prevBanner}
-              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full transition-all opacity-100 sm:opacity-0 sm:group-hover:opacity-100 touch-manipulation"
-              aria-label="Banner anterior"
-            >
-              <svg
-                className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
-
-            <button
-              onClick={nextBanner}
-              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full transition-all opacity-100 sm:opacity-0 sm:group-hover:opacity-100 touch-manipulation"
-              aria-label="Próximo banner"
-            >
-              <svg
-                className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-
-            {/* Indicadores */}
-            <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 sm:gap-2">
-              {banners.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentBanner(index)}
-                  className={`h-2 sm:h-2.5 rounded-full transition-all touch-manipulation ${
-                    index === currentBanner
-                      ? "bg-white w-6 sm:w-8"
-                      : "bg-white/50 hover:bg-white/75 w-2 sm:w-2.5"
-                  }`}
-                  aria-label={`Ir para banner ${index + 1}`}
-                />
-              ))}
-            </div>
           </div>
 
           {/* Seção de Acompanhamento */}
